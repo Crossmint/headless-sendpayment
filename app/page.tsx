@@ -11,6 +11,7 @@ import {
   arbitrumSepolia,
   base,
   polygonAmoy,
+  zoraSepolia,
 } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
@@ -24,6 +25,7 @@ const config = getDefaultConfig({
     arbitrumSepolia,
     base,
     polygonAmoy,
+    zoraSepolia,
   ],
   ssr: true,
 });
