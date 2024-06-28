@@ -25,13 +25,13 @@ export default function StripePaymentElementPage() {
       <div className="flex w-full flex-col items-center justify-start gap-y-3 text-black mb-10">
         <input
           type="text"
-          placeholder="Stripe Client Secret"
+          placeholder="order.payment.preparation.stripeClientSecret"
           className="w-full px-4 py-3 rounded"
           onChange={(e) => setStripeClientSecret(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Stripe Publishable Key"
+          placeholder="order.payment.preparation.stripePublishableKey"
           className="w-full px-4 py-3 rounded"
           onChange={(e) => setStripePublishableKey(e.target.value)}
         />
