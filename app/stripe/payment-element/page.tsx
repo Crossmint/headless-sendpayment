@@ -22,7 +22,7 @@ export default function StripePaymentElementPage() {
 
   return (
     <div className="flex w-full flex-col items-center justify-start p-5">
-      <div className="flex w-full flex-col items-center justify-start gap-y-3 text-black mb-10">
+      <div className="flex w-full flex-col items-center justify-start gap-y-3 text-black mb-2">
         <input
           type="text"
           placeholder="order.payment.preparation.stripeClientSecret"
@@ -38,12 +38,18 @@ export default function StripePaymentElementPage() {
       </div>
 
       {hasStripeKeys && (
-        <div className="flex w-full max-w-[475px] flex-col items-center justify-start gap-y-6">
-          <PaymentElementWrapper
-            stripePublishableKey={stripePublishableKey}
-            stripeClientSecret={stripeClientSecret}
-          />
-        </div>
+        <>
+          <div className="py-2 px-5 w-full bg-green-100 text-green-700 border border-green-400 rounded mb-6">
+            Use the test card &apos;4242 4242 4242 4242&apos; with any CVC and a
+            valid expiration date
+          </div>
+          <div className="flex w-full max-w-[475px] flex-col items-center justify-start gap-y-6">
+            <PaymentElementWrapper
+              stripePublishableKey={stripePublishableKey}
+              stripeClientSecret={stripeClientSecret}
+            />
+          </div>
+        </>
       )}
     </div>
   );
