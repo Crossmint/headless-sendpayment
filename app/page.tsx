@@ -14,11 +14,25 @@ import {
   zoraSepolia,
 } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { defineChain, Chain } from "viem";
+
+const worldchain = defineChain({
+  id: 480,
+  name: 'World Chain',
+  nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+  rpcUrls: {
+    default: { http: ['https://worldchain.drpc.org'] },
+  },
+  blockExplorers: {
+    default: { name: 'World Chain Explorer', url: 'https://worldscan.org' },
+  },
+})
 
 const config = getDefaultConfig({
-  appName: "Crossmint Headless UI Demo",
+  appName: "Headless Send Payment Demo",
   projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_ID || "",
   chains: [
+    worldchain,
     sepolia,
     baseSepolia,
     optimismSepolia,
@@ -45,3 +59,6 @@ const Page = () => {
 };
 
 export default Page;
+
+
+
