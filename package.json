@@ -19,7 +19,7 @@
     "@stripe/stripe-js": "^4.0.0",
     "@tanstack/react-query": "^5.40.1",
     "bs58": "^5.0.0",
-    "next": "15.3.3",
+    "next": "15.3.8",
     "react": "^18",
     "react-dom": "^18",
     "viem": "2.30.6",
